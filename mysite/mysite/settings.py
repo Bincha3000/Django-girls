@@ -25,7 +25,7 @@ SECRET_KEY = 'i1da#io=oqordn+eutem+^r0wpg3+ftp#qu@5likx!-h65ky6m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'bincha.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'percevelle.pythonanywhere.com']
 
 
 # Application definition
