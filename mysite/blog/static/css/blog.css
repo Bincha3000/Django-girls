@@ -1,3 +1,18 @@
+/*GLOBAL*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: sans-serif;
+}
+a {
+    text-decoration: none;
+}
+
+
 .page-header {
     background-color: #ff9400;
     margin-top: 0;
@@ -14,8 +29,8 @@
     margin-left: 40px;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+h1, h2, h3, h4 { 
+    font-family: 'Playfair Display SC', serif;
 }
 
 .date {
@@ -43,4 +58,24 @@ h1, h2, h3, h4 {
 
 .post h1 a, .post h1 a:visited {
     color: #000000;
+}
+.main-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.registation-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.button {
+    outline: none;
+    border: none;
+
+}
+.button_primary {
+    background-color: lightgreen;
 }
