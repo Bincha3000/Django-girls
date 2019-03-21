@@ -8,25 +8,51 @@ body {
 p {
     font-family: sans-serif;
 }
+
 a {
     text-decoration: none;
 }
 
 
 .page-header {
-    background-color: #ff9400;
-    margin-top: 0;
+    background-image: url('../images/flower_pattern.png');
+    height: 140px;
     padding: 20px 20px 20px 40px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     color: #ffffff;
-    font-size: 36pt;
+    font-size: 50px;
     text-decoration: none;
+    text-shadow: 1px 1px #d977fa, -1px -1px #140a18;
 }
+
+.header_add_button {
+    flex: 1 1 auto;
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid #f7f7f7;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    overflow:hidden;
+    transition: .3s;}
+    
+.header_add_button:after {
+        position: absolute;
+        transition: .3s;
+        content: '';
+        width: 0;
+        left: 50%;
+        bottom: 0;
+        height: 3px;
+        background: #f7f7f7;
+      }
+
 
 .content {
     margin-left: 40px;
+    margin-right: 100px;
 }
 
 h1, h2, h3, h4 { 
@@ -71,11 +97,9 @@ h1, h2, h3, h4 {
     margin: 0 auto;
 }
 
-.button {
-    outline: none;
-    border: none;
 
-}
-.button_primary {
-    background-color: lightgreen;
+
+.icon_note {
+    width: 50px;
+    height: 50px;
 }
