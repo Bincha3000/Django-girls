@@ -6,90 +6,101 @@ body {
 }
 
 p {
-    font-family: sans-serif;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 a {
     text-decoration: none;
 }
 
-
 .page-header {
     background-image: url('../images/flower_pattern.png');
     height: 140px;
-    padding: 20px 20px 20px 40px;
+    padding: 20px 20px 20px 70px;
 }
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+.header-title {
     color: #ffffff;
     font-size: 50px;
     text-decoration: none;
     text-shadow: 1px 1px #d977fa, -1px -1px #140a18;
 }
 
-.header_add_button {
-    flex: 1 1 auto;
-    margin: 10px;
-    padding: 20px;
-    border: 2px solid #f7f7f7;
-    text-align: center;
-    text-transform: uppercase;
-    position: relative;
-    overflow:hidden;
-    transition: .3s;}
-    
-.header_add_button:after {
-        position: absolute;
-        transition: .3s;
-        content: '';
-        width: 0;
-        left: 50%;
-        bottom: 0;
-        height: 3px;
-        background: #f7f7f7;
-      }
 
-
-.content {
-    margin-left: 40px;
-    margin-right: 100px;
+.btn{
+    color: #190B21;
+    background: #fff;
+    border: 3px solid #190B21;
+    font-size: 17px;
+    padding: 7px 12px;
+    font-weight: 800;
+    margin: 7px 0;
+    margin-right: 12px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Playfair Display SC', serif;
+    min-width: 120px;
 }
 
-h1, h2, h3, h4 { 
+.btn:hover, .btn:active {
+  color:#fff;
+  background:#190B21;
+}
+
+
+.top-menu {
+    float: right;
+    margin-top: 25px;
+}
+
+h1 {
     font-family: 'Playfair Display SC', serif;
 }
 
-.date {
-    color: #828282;
+.post-date {
+    color: #777575;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 17px;
 }
 
-.save {
-    float: right;
-}
-
-.post-form textarea, .post-form input {
-    width: 100%;
-}
-
-.top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
-    float: right;
-    font-size: 26pt;
-    margin-right: 20px;
+.post-title{
+    color: #190B21;
+    font-style: italic;
+    font-size: 30px;
 }
 
 .post {
     margin-bottom: 70px;
+    margin-left: 70px;
+    margin-right: 80px;
+    font-size: 20px;
 }
 
-.post h1 a, .post h1 a:visited {
-    color: #000000;
+.create-post{
+    margin-left: 70px;
+    margin-right: 300px;
 }
-.main-title {
+.new-post{
+    color: #190B21;
+    font-size: 30px;
+
+}
+.post-form input{
+    width: 100%;
+
+    
+}
+.post-form textarea {
+    width: 100%;
+}
+
+.main-title{
     text-align: center;
-    margin-bottom: 40px;
 }
+
 .registation-form {
+    font-family: 'Cormorant Garamond', serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,9 +108,11 @@ h1, h2, h3, h4 {
     margin: 0 auto;
 }
 
-
-
-.icon_note {
-    width: 50px;
-    height: 50px;
+.button-regs{
+    max-width: 500px;
+    justify-content: center;
 }
+
+
+
+
