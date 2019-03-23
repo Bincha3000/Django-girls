@@ -3,14 +3,14 @@
 {% block content %}
     <div class="post">
         {% if post.published_date %}
-            <div class="date">
-                {{post.published_date}}
+            <div class="post-date">
+                <p>{{post.published_date}}</p>
             </div>
         {% endif %}
+        <h1 class="post-title">{{ post.title }}</h1>
+        <p class="post-text">{{ post.text|linebreaksbr }}</p>
         {% if user.is_superuser %}
-        <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <a class="btn btn-block" href="{% url 'post_edit' pk=post.pk %}">Редактировать пост</a>
         {% endif %}
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.text|linebreaksbr }}</p>
     </div>
 {% endblock %}

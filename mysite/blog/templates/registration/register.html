@@ -4,20 +4,22 @@
 <h1 class="main-title">Регистрация</h1>
     <form method="post" class="registation-form">
         {% csrf_token %}
-        <label for="username">Имя пользователя:</label>
-          <input class="test-input" id="username" type="text" name="username">
-         <label for="email">
-             Email: 
-         </label>
-          <input id="email" type="email" name='email'>
-         <label for="first_password">
-             Пароль: 
-         </label>
-          <input id="first_password" type="password" name="password">
-         <label for="second_password">
-             Ещё раз малышка: 
-         </label>
-          <input id="second_password" type="password" name="password2">
-        <input type="submit" value="Регистрация" class="btn button-reg">
+        <label for="username">
+            Имя пользователя:
+        </label>
+            <input class="test-input" id="username" type="text" name="username">
+        <label for="email">
+             Email:
+        </label>
+            <input id="email" type="email" name='email'>
+        <label for="first_password">
+             Пароль:
+        </label>
+            <input id="first_password" type="password" name="password">
+        <label for="second_password">
+             Ещё раз малышка:
+        </label>
+            <input id="second_password" type="password" name="password2">
+        <input type="submit" value="Регистрация" class="btn btn-post">
 </form>
 {% endblock %}

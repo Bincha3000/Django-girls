@@ -7,6 +7,8 @@ body {
 
 p {
     font-family: 'Cormorant Garamond', serif;
+    margin: 0;
+    margin-bottom: 10px;
 }
 
 a {
@@ -108,11 +110,15 @@ h1 {
     margin: 0 auto;
 }
 
-.button-regs{
-    max-width: 500px;
+.login-form{
+    font-family: 'Cormorant Garamond', serif;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-
-
-
+.btn-post{
+    width: 100%;
+}
