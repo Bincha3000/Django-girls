@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+    <body>
+        <h1>Мой профиль</h1>
+
+        Имя пользователя: {{ user.username }} <br>
+        Email: {{ user.email }}
+    </body>
+{% endblock %}
