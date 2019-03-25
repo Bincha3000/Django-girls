@@ -4,7 +4,8 @@
 <div class="create-post">
     <h1 class="new-post">New post</h1>
     <form method="POST" class="post-form">{% csrf_token %}
-        {{ form.as_p }}
+        <label for="post" class="title-post">Title:{{ form.title }}</label>
+        <label for="text" class="title-text">Text:{{ form.text }}</label>
         <button type="submit" class="btn button-block">Save</button>
     </form>
 </div>

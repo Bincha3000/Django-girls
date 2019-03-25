@@ -13,6 +13,7 @@ p {
 
 a {
     text-decoration: none;
+    margin: 0;
 }
 
 .page-header {
@@ -59,6 +60,14 @@ h1 {
     font-family: 'Playfair Display SC', serif;
 }
 
+.post-author{
+    margin: 0;
+    font-style: italic;
+    font-weight: 600;
+    color: #76009C;
+}
+
+
 .post-date {
     color: #777575;
     font-weight: 600;
@@ -73,7 +82,8 @@ h1 {
 }
 
 .post {
-    margin-bottom: 70px;
+    margin-bottom: 55px;
+    margin-top: 15px;
     margin-left: 70px;
     margin-right: 80px;
     font-size: 20px;
@@ -121,4 +131,17 @@ h1 {
 
 .btn-post{
     width: 100%;
+}
+
+.profile-user{
+    font-family: 'Playfair Display SC', serif;
+    font-size: 30px;
+    font-style: italic;
+    color: #190B21;
+    font-weight: 700;
+}
+
+.myposts{
+    margin-top: 20px;
+    font-style: italic;
 }

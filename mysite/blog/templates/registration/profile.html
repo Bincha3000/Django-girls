@@ -1,10 +1,27 @@
 {% extends 'blog/base.html' %}
 {% load static %}
 {% block content %}
-    <body>
-        <h1>Мой профиль</h1>
+<body>
 
-        Имя пользователя: {{ user.username }} <br>
-        Email: {{ user.email }}
-    </body>
+    <div class="post">
+    <div class="profile-head">
+    <h1 class="profile-title">Мой профиль</h1>
+    <label for="username" class='profile-user'>{{ user.username }}</label><br>
+    <label for="email">Email: {{ user.email }}</label>
+    </div>
+    <label for="posts" class="myposts">My posts:</label>
+    {% for post in posts %}
+        {% if post.author == request.user %}
+        <div class="profile-posts">
+            <h1><a href="{% url 'post_detail' pk=post.pk %}" class="post-title">{{ post.title }}</a></h1>
+            <p class="post-text">{{ post.text|linebreaksbr }}</p>
+            <div class="post-date">
+                    <p>Опубликовано: {{ post.published_date }}</p>
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+</body>
 {% endblock %}

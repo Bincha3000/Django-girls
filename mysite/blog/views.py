@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, \
                              redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.utils import timezone
 from .models import Post
 from .forms import PostForm
@@ -43,8 +43,19 @@ class LoginView(TemplateView):
         return render(request, self.template_name, context)
 
 
-class ProfilePage(TemplateView):
-    template_name = "registration/profile.html"
+class LogoutView(TemplateView):
+
+    def get(self, request):
+        logout(request)
+        return redirect("/")
+
+
+
+def profile_page(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    return render(request, 'registration/profile.html', {'posts': posts})
+
+
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
@@ -76,7 +87,7 @@ def post_edit(request, pk):
             post.author = request.user
             post.published_date = timezone.now()
             post.save()
-            return redirect('post_detail', pk=post.pk)
+            return redirect('/', pk=post.pk)
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
